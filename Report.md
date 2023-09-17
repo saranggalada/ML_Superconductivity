@@ -1,22 +1,22 @@
-﻿![](Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.001.png)
+﻿![](src/Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.001.png)
 
 **MachineLearning**
 
 **Course Project Report (Regression)**
 
-**(Final Report, TeamNo: 01)![ref1]**
+**(Final Report, Team No: 01)![ref1]**
 
 **Title of the project:** Superconductivity Data
 
-**Author 1 :** SarangGalada, <sarang.g-25@scds.saiuniversity.edu.in>
+**Author 1 :** Sarang Galada, <sarang.g-25@scds.saiuniversity.edu.in>
 
-**Author 2 :** R Sai PranavAadhitya, <saipranavaadhitya.r-25@scds.saiuniversity.edu.in>
+**Author 2 :** R Sai Pranav Aadhitya, <saipranavaadhitya.r-25@scds.saiuniversity.edu.in>
 
 ![ref1]
 
 1. **Introduction**
 
-Superconductivity is theproperty of certain materials to exhibit zero electrical resistance, ie. ability to conduct direct current electricity without energy loss, when cooled below their critical temperature. Due to its unique advantages, a lot of research has been directed towards superconductivity and its applications. Despite that, the relationship between Critical Temperature (below which the material behaves as a superconductor) and the material’s chemical properties is poorly understood. This has propelled efforts to use Machine Learning techniques to model critical temperature and understand its relationship with the material’s chemical properties.
+Superconductivity is the property of certain materials to exhibit zero electrical resistance, ie. ability to conduct direct current electricity without energy loss, when cooled below their critical temperature. Due to its unique advantages, a lot of research has been directed towards superconductivity and its applications. Despite that, the relationship between Critical Temperature (below which the material behaves as a superconductor) and the material’s chemical properties is poorly understood. This has propelled efforts to use Machine Learning techniques to model critical temperature and understand its relationship with the material’s chemical properties.
 
 - ProblemStatement:
 
@@ -31,7 +31,7 @@ This project makes use of the Superconductivity dataset from University of Calif
 
 As mentioned earlier, the dataset contains 21,263 rows and 82 columns.
 
-![](Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.003.jpeg)
+![](src/Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.003.jpeg)
 
 Peak into the first 5 rows of the dataset
 
@@ -39,13 +39,13 @@ Majority of the columns are of type Float64, with the exception of two (number\_
 
 To understand the relationship between the features of the dataset and the target variable critical\_temp, we make use of scatterplots and correlation matrices. Samples of some scatterplots are shown below.
 
-![](Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.004.jpeg) ![](Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.005.jpeg)
+![](src/Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.004.jpeg) ![](src/Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.005.jpeg)
 
-![](Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.006.jpeg) ![](Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.007.jpeg) As can be seen, we do not observe distinct linear patterns emerge between the features and our target variable critical\_temp, but still do observe an increasing or decreasing trend in the case of some features. The values in the correlation matrix support this fact, as those features show a reasonably high absolute value of correlation with critical\_temp, indicating some amount of linear dependence.
+![](src/Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.006.jpeg) ![](src/Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.007.jpeg) As can be seen, we do not observe distinct linear patterns emerge between the features and our target variable critical\_temp, but still do observe an increasing or decreasing trend in the case of some features. The values in the correlation matrix support this fact, as those features show a reasonably high absolute value of correlation with critical\_temp, indicating some amount of linear dependence.
 
 Here’s a histogram showing distribution of correlation values of all the features with target variable critical\_temp.
 
-![](Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.008.jpeg)
+![](src/Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.008.jpeg)
 
 - Dimensionality Reduction & Data Visualisation:
 
@@ -55,11 +55,11 @@ We use dimensionality reduction techniques to reduce the number of features in t
 
 Reduces the features of the data by finding their directions of maximum variance and projecting the data along those directions, thus preserving information of the original attributes and also reducing the size of the dataset for better computations and visualizations.
 
-![](Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.009.jpeg)
+![](src/Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.009.jpeg)
 
 - t-Distributed Stochastic Neighbour Embedding(t-SNE): tSNE is a nonlinear dimensionality reduction technique that uses similarity between data points to construct probability distributions and replicates them in lower dimensions. Thus, it reduces the dimensionality of the data while preserving the structure of each feature as much as possible. It is a Manifold approach.
 
-![](Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.010.jpeg)
+![](src/Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.010.jpeg)
 
 3. **Methods**
 1. **Baseline - Linear Regression**
@@ -69,7 +69,7 @@ The critical\_temp column is stored as our target variable (represented as y) an
 
 Next, we evaluate the performance of this model using the R2 score, which tells us how much better the model performs compared to just using the mean value as the model’s prediction.
 
-![](Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.011.png)
+![](src/Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.011.png)
 
 To further understand the accuracy of our model, we visualize:
 
@@ -175,15 +175,15 @@ Principal Component Analysis, or PCA, reduces the features of the data by findin
 2. **Results**
 - Visualisations of the reduced data in 3D
 
-![](Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.012.jpeg)
+![](src/Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.012.jpeg)
 
-![](Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.013.jpeg)
+![](src/Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.013.jpeg)
 
 **R2 Scores**
 
 Table of R2 scores for all the Machine Learning experiments conducted in thisproject
 
-![](Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.014.jpeg)
+![](src/Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.014.jpeg)
 
 Note: The SVR model from Scikit-Learn couldn’t handle the regular dataset or standardised dataset due to their having a large number of features, hence experiments were not conducted for those.
 
@@ -200,7 +200,7 @@ Note: The SVR model from Scikit-Learn couldn’t handle the regular dataset or s
 
 (GridSearchCV)
 
-![](Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.015.jpeg)
+![](src/Aspose.Words.2a7c6888-0295-4cc8-a828-bccfa6042f93.015.jpeg)
 
 Note: Hyperparameter tuning was implemented only on select experiments across models. Due to long computation time, only a small range of values was chosen for each such experiment and GridSearchCV was chosen as the preferred method. Given the short size of the grid, it did not make sense to use RandomizedSearchCV in addition to GridSearchCV since their results would most likely match and would not add meaning.
 
